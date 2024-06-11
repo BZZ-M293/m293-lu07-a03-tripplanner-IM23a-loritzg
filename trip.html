@@ -1,13 +1,109 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Reisebuchungs-Formular</title>
+    <meta charset="UTF-8">
+    <title>Reisebuchungs-Formular</title>
 
 </head>
 <body>
 
 <h1>Reisebuchungs-Formular</h1>
+<form action="https://it.bzz.ch/demo/formdata/index.php">
+    <fieldset>
+        <legend>Abflughafen</legend>
+        <select name="Abflughafen" size="1">
+            <optgroup label="Deutschland">
+                <option>München</option>
+                <option>Berlin</option>
+                <option>Frankfurt</option>
+            </optgroup>
+            <optgroup label="Österreich">
+                <option>Wien</option>
+                <option>Linz</option>
+            </optgroup>
+            <optgroup label="Italien">
+                <option>Rom</option>
+                <option>Venedig</option>
+            </optgroup>
+            <optgroup label="Frankreich">
+                <option>Paris</option>
+                <option>Lyon</option>
+            </optgroup>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Unterkunft</legend>
+        <input type="radio" id="hotel" name="unterkunft" value="hotel">
+        <label for="hotel"> Hotel</label>
+        <input type="radio" id="ferienwohnung" name="unterkunft"
+               value="ferienwohnung">
+        <label for="ferienwohnung"> Ferienwohnung</label>
+        <input type="radio" id="hostel" name="unterkunft" value="hostel">
+        <label for="hostel"> Hostel</label>
+    </fieldset>
+    <fieldset>
+        <legend>Dienstleistung</legend>
+        <input type="checkbox" name="dienstleistung[]" value="reiseversicherung"
+               id="check1" checked>
+        <label for="check1">reiseversicherung</label>
+        <input type="checkbox" name="dienstleistung[]" value="flughafentransfer"
+               id="check2" checked>
+        <label for="check2">Flughafentransfer</label>
+        <input type="checkbox" name="dienstleistung[]" value="zusatzgepaeck"
+               id="check3" checked>
+        <label for="check3">Zusatz Gepäck</label>
+    </fieldset>
+    <fieldset>
+        <legend>Reisezeitraum</legend>
+        <input id="anfangsdatum" name="anfangsdatum" type="date">
+        <input id="enddatum" name="enddatum" type="date">
+        <input id="reisetage" name="reisetage" type="number" min="1"
+               max="21">
+    </fieldset>
+    <fieldset>
+        <legend>Personenanzahl</legend>
+        <input id="personenanzahl" name="personenanzahl" type="number">
+    </fieldset>
+    <fieldset>
+        <legend>Fluggesellschaft</legend>
+        <select>
+            <option>Swiss</option>
+            <option>Aerologic</option>
+            <option>Air Panarea</option>
+            <option>Amelia</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Optionale Dienstleistungen</legend>
+        <input type="checkbox" name="op.dienstleistung[]" value="prioritycheckin"
+               id="check4" checked>
+        <label for="check4">Priority-Check-In</label>
+        <input type="checkbox" name="op.dienstleistung[]" value="zusaetzlicheshandgepaeck"
+               id="check5" checked>
+        <label for="check5">zusätzliches Handgepäck</label>
+        <input type="checkbox" name="op.dienstleistung[]" value="mietwagenbuchung"
+               id="check6" checked>
+        <label for="check6">Mietwagenbuchung</label>
+    </fieldset>
+    <fieldset>
+        <legend>Reiseziele</legend>
+        <label> Reiseziel
+            <input type="search" list="reiseziel">
+            <datalist id="reiseziel">
+                <option value="Tokio">
+                <option value="Amsterdam">
+                <option value="Janghai">
+            </datalist>
+        </label>
+    </fieldset>
+    <fieldset>
+        <legend>E-Mail</legend>
+        <input type="email" name="email">
+    </fieldset>
+    <button type="reset">Zurücksetzen</button>
+    <button type="submit">Absenden</button>
+
+</form>
 
 
 </body>
